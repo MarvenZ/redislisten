@@ -1,0 +1,11 @@
+[Unit]
+Description=Listen to an message quene in redis and mkdir if aaa|bbb,ccc fomat message is detected
+
+[Service]
+Type=forking
+PIDFile=/run/redisListen.pid
+ExecStart=/var/hw/cpp/exeProg/redisListen
+KillSignal=SIGUSR2
+
+[Install]
+
